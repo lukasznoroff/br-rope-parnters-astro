@@ -17,12 +17,7 @@ import MainLayout from '../layouts/MainLayout.astro';
             <h2><p class='text-item'>Rope Access</p></h2>
             <div class='box'>
               <p class='enter-text'>ENTER</p>
-              <svg
-                class='arrow'
-                width='28'
-                height='24'
-                viewBox='0 0 28 24'
-              >
+              <svg class='arrow' width='28' height='24' viewBox='0 0 28 24'>
                 <path
                   d='M27.0607 13.0673C27.6464 12.4815 27.6464 11.5317 27.0607 10.9459L17.5147 1.39999C16.9289 0.814204 15.9792 0.814204 15.3934 1.39999C14.8076 1.98578 14.8076 2.93552 15.3934 3.52131L23.8787 12.0066L15.3934 20.4919C14.8076 21.0777 14.8076 22.0274 15.3934 22.6132C15.9792 23.199 16.9289 23.199 17.5147 22.6132L27.0607 13.0673ZM0 13.5066H26V10.5066H0V13.5066Z'
                   fill='black'></path>
@@ -58,10 +53,7 @@ import MainLayout from '../layouts/MainLayout.astro';
                 viewBox='0 0 28 24'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
-               
               >
-    
-
                 <path
                   d='M27.0607 13.0673C27.6464 12.4815 27.6464 11.5317 27.0607 10.9459L17.5147 1.39999C16.9289 0.814204 15.9792 0.814204 15.3934 1.39999C14.8076 1.98578 14.8076 2.93552 15.3934 3.52131L23.8787 12.0066L15.3934 20.4919C14.8076 21.0777 14.8076 22.0274 15.3934 22.6132C15.9792 23.199 16.9289 23.199 17.5147 22.6132L27.0607 13.0673ZM0 13.5066H26V10.5066H0V13.5066Z'
                   fill='black'></path>
@@ -122,9 +114,6 @@ import MainLayout from '../layouts/MainLayout.astro';
       /* filter: grayscale(60%); */
       /* filter: grayscale(0.7); */
 
-
-
-      
       @media screen and (max-width: 768px) {
         width: auto;
         margin: 10px;
@@ -174,15 +163,17 @@ import MainLayout from '../layouts/MainLayout.astro';
       }
     }
 
-
-
     .mask {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
+      /* width: 100%; */
+      /* height: 100%; */
+      /* overflow: hidden; */
       clip-path: polygon(30% 30%, 70% 30%, 70% 70%, 30% 70%);
+      @media screen and (max-width: 768px) {
+        height: 130vh;
+        width: 90vw;
+        margin: 0 auto;
+      }
     }
-
     .bus {
       width: 100%;
       height: 100%;
@@ -212,7 +203,6 @@ import MainLayout from '../layouts/MainLayout.astro';
     .arrow {
       opacity: 1;
       transition: opacity 0.5s ease-in-out 0.7s;
-   
     }
 
     .grid-item:hover > .box {
@@ -256,7 +246,7 @@ import MainLayout from '../layouts/MainLayout.astro';
         cursor: pointer;
         background-color: #f2a40b;
         background-color: #909da7;
-        background-color: #56778C;
+        background-color: #56778c;
         /* border-top-color: #f2a40b;
         border-bottom-color: #f2a40b; */
 
@@ -268,6 +258,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       @media screen and (max-width: 768px) {
         height: 200px;
         width: 350px;
+        width: 400px;
         &:nth-child(4) {
           border-top: none;
         }
@@ -276,8 +267,8 @@ import MainLayout from '../layouts/MainLayout.astro';
 
     .text-item {
       font-size: 1.1vw;
-       color: #404138; 
-       color: #6a6a6a; 
+      color: #404138;
+      color: #6a6a6a;
 
       transition: all 0.4s ease-in-out;
       /* width: 10vw; */
@@ -314,7 +305,6 @@ import MainLayout from '../layouts/MainLayout.astro';
 
       transition: all 0.4s ease-in-out;
       &:hover {
-
         /* transform: translate(10vw, 10vw); */
       }
     }
@@ -367,7 +357,5 @@ import MainLayout from '../layouts/MainLayout.astro';
       .to('.mask', { scale: 0.95, duration: 1.6 });
 
     GSDevTools.create({ animation: tl });
-
-    
   </script>
 </MainLayout>
